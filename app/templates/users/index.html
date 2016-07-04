@@ -1,20 +1,22 @@
-<div ng-if="isAuthenticated()" style="height:100%">
 
-       <div class="index-button">
 
-        <input placeholder="Search" type="text" ng-model="gridOptions.quickFilterText"/>
+       <form  role="form" ng-submit="GetUser()">
+     <input placeholder="IPAdress*" type="text" id="ipaddress" name="ipaddress"  ng-model="user.data.attributes.ipaddress"  required>
+    <input placeholder="Username*" type="text" id="username" name="username"  ng-model="user.data.attributes.username"  required>
+    <input placeholder="Password*" type="password" id="password" name="password"  ng-model="user.data.attributes.password"  required>
+    
+    <button  ng-disabled="loading" class="button-primary" type="submit" >
 
-      <div>
-        <a ui-sref="users.new"><button class="button-primary">New</button></a>
+                              <span ng-hide="loading">Submit</span>
+                              <span ng-show="loading">Connecting....</span></button>
 
-        <span ng-repeat="selectedRow in gridOptions.selectedRows">
-          <a ui-sref="users.edit({id:selectedRow.id })" ><button class="button-primary" id="editButton" >Edit</button></a>
+           </form>
 
-          <button ng-click="deleteUser(selectedRow.id)" class="button-primary" id="deleteButton"> Delete </button>
-        </span>
-       </div>
-    </div>
-
-    <div ag-grid="gridOptions" class="ag-fresh"  ></div>
-
-</div>
+           
+     <div>
+     <p> Users that have root privileges and Interactive Shell Access are as follows
+     
+     
+     <strong ng-repeat="user in data"> {{ user }} </strong> </p>
+     
+     </div>

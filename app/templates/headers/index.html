@@ -1,0 +1,35 @@
+
+  <form class="form-field-container" role="form" ng-submit="getHeader()" >
+     
+     
+        
+         <textarea type="text" placeholder="headers*" name="headers" id="headers" ng-model="header.data.attributes.headers"  required> </textarea> 
+         
+          <button  ng-disabled="loading" class="button-primary" type="submit" >                                        
+                              
+                              <span ng-hide="loading">Submit</span>
+                              <span ng-show="loading">Loading....</span></button> 
+          
+       <p> From Email address is <strong>{{ data.From }}</strong> </p> 
+       <p> To Email address is <strong> {{ data.To}} </strong> </p> 
+       <p> Originating IP address is <strong>{{ data.x-originating-ip }}</strong> </p> 
+       <p> Receiving Server IP address is <strong>{{ data.Received }} </strong> </p> 
+                     
+       
+
+    
+           
+              
+     
+   
+   
+   
+
+  </form>
+
+      
+    
+            
+
+
+
