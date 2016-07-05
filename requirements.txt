@@ -1,7 +1,9 @@
+aniso8601==1.1.0
 cffi==1.7.0
 click==6.6
 cryptography==1.4
 Flask==0.11.1
+Flask-RESTful==0.3.5
 gevent==1.1.1
 greenlet==0.4.10
 idna==2.1
@@ -14,6 +16,8 @@ parallel-ssh==0.91.1
 paramiko==2.0.1
 pyasn1==0.1.9
 pycparser==2.14
+python-dateutil==2.5.3
+pytz==2016.4
 six==1.10.0
 uWSGI==2.0.13.1
 Werkzeug==0.11.10
