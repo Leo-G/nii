@@ -1,4 +1,4 @@
-angular.module('myApp', ['ui.router', 'ngResource',  "angularGrid" , 'myApp.controllers', 'myApp.services', 'satellizer','toaster', 'ngAnimate', 'angular-google-analytics']);
+angular.module('myApp', ['ui.router', 'ngResource',  'myApp.controllers', 'myApp.services', 'toaster', 'ngAnimate']);
 
 angular.module('myApp')
   .run( function($rootScope, $state){
@@ -8,7 +8,7 @@ angular.module('myApp')
                 }
     );
 
-angular.module('myApp').config(function( $stateProvider , $urlRouterProvider, $authProvider, AnalyticsProvider) {
+angular.module('myApp').config(function( $stateProvider , $urlRouterProvider) {
 
    
     $urlRouterProvider.otherwise('/')
